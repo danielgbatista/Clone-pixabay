@@ -10,7 +10,6 @@
 }
 
 body {
-  background-color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,6 +54,11 @@ header #container-logo-pesquisa #logo {
 header #container-logo-pesquisa #logo img {
   width: inherit;
   height: inherit;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
 }
 
 header #container-logo-pesquisa #pesquisa {
@@ -101,6 +105,11 @@ header #container-logo-pesquisa #pesquisa #lupa {
 }
 
 header #container-logo-pesquisa #pesquisa #lupa img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
   width: inherit;
   height: inherit;
 }
@@ -128,6 +137,11 @@ header #container-perfil-btn #img-perfil {
 }
 
 header #container-perfil-btn #img-perfil img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
   width: inherit;
   height: inherit;
   border-radius: 100%;
@@ -163,6 +177,11 @@ header #container-perfil-btn #button-carregar #btn-carregar {
 }
 
 header #container-perfil-btn #button-carregar #btn-carregar img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
   width: 30px;
   height: 30px;
   position: relative;
@@ -182,7 +201,56 @@ nav {
   min-height: 780px;
   height: auto;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #c3c6c8;
+}
+
+#galeria-container {
+  min-height: 780px;
+  height: auto;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10px 10px 10px 10px;
+}
+
+.galeria-itens {
+  height: 300px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.galeria-itens img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 4px;
+  -webkit-filter: brightness(60%);
+          filter: brightness(60%);
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.galeria-itens img:hover {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
 }
 
 footer {
@@ -191,6 +259,7 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-style: italic;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

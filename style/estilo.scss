@@ -9,7 +9,6 @@
 }
 
 body{
-    background-color: black;
     display: flex;
     flex-direction: column;
 }
@@ -34,6 +33,11 @@ header{
             img{
                 width: inherit;
                 height: inherit;
+                -webkit-user-drag: none;
+                -khtml-user-drag: none;
+                -moz-user-drag: none;
+                -o-user-drag: none;
+                user-drag: none;
             }
         }
         #pesquisa{
@@ -62,6 +66,11 @@ header{
                 position: relative;
                 filter: brightness(10%);
                 img{
+                    -webkit-user-drag: none;
+                    -khtml-user-drag: none;
+                    -moz-user-drag: none;
+                    -o-user-drag: none;
+                    user-drag: none;
                     width: inherit;
                     height: inherit;
                 }
@@ -81,6 +90,11 @@ header{
             margin-right: 20px;
             background-color: skyblue;
             img{
+                -webkit-user-drag: none;
+                -khtml-user-drag: none;
+                -moz-user-drag: none;
+                -o-user-drag: none;
+                user-drag: none;
                 width: inherit;
                 height: inherit;
                 border-radius: 100%;
@@ -106,6 +120,11 @@ header{
                 padding-right: 25px;
                 background-color:#2ec66d;
                 img{
+                    -webkit-user-drag: none;
+                    -khtml-user-drag: none;
+                    -moz-user-drag: none;
+                    -o-user-drag: none;
+                    user-drag: none;
                     width: 30px;
                     height: 30px;
                     position: relative;
@@ -128,13 +147,46 @@ nav{
     min-height: 780px;
     height: auto;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #c3c6c8;
+}
+
+#galeria-container{
+    min-height: 780px;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    padding: 10px 10px 10px 10px;
+}
+
+.galeria-itens{
+    height: 300px;
+    flex-grow: 1;
+}
+
+.galeria-itens img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    filter: brightness(60%);
+    transition: all .3s linear;
+}
+
+.galeria-itens img:hover {
+    filter: brightness(100%);
 }
 
 footer{
     width: 100%;
     height: 50px;
     display: flex;
+    font-style: italic;
     justify-content: center;
     align-items: center;
     background-color: #f2f2f2;
